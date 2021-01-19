@@ -1,0 +1,49 @@
+Loan Disbursement Analysis
+
+Business Case
+
+1. Montly disbursements in EUR for the last 6 months 
+principal_amount_eur as a measure
+
+
+2. Disbursements per Loan officer
+Count of number of loans approved/disbursed by each officer in last month .
+Volume of total disbursed loan i.e (sum(principal_amount_eur ))
+
+
+3. portfolio at risk 
+=KPI dashboard to observe 
+(sum of principal_amount_outstanding_eur) with overdue days greater than 30 divided by total sum (principal_amount_outstanding_eur)
+
+4. Add filters to breakdown by branch_key, product and loan_officer
+
+
+Analytic Approach
+
+1. Understanding Business
+2. Data Requirements and collection
+3. Understanding and Preparing the datasource
+4. Data Modeling
+   Identify fact , dimension table and see if we have any reference table
+5. Build visualization 
+     a. Prepare the data using Power Query and load
+     b. Power BI Modeling
+     c. Form Reports / Charts / dashboards
+     d. Deploy to Power BI serveice and thus to power BI apps
+
+
+Methodology 
+
+1. Business analysis of disbursement is performed with all amount in EUR as per Requirement.
+2. Firstly , a Dashboard showing the last 6 months of disbursement status is created. This is last 6 months from as of date of last disbursement. i.e Feb 29,2020.
+The total disbursement with year and month are presented. The filter for all and specific Product , Loan Officer and branch is provided to drill down the data for analysis.
+3. Second dashboard is the last month's disbursement details . So here last month represents the last month for the choosen date in the filter.The disbursement graph presents 
+the total disbursed amount and number of loans disbursed for each loan officer for previous month. 
+The data can be further drilled down for specific branch and product.
+4. KPI here is Portfolio at Risk . 
+PAR is calculated as Outstanding Amount for all loans with more than 30 days of outstanding / all outstanding loans.
+The 30% PAR is presented for all Loan potfolios that have outstanding items.
+5. List of invalid loans are presented . These are loans that does not have associated data in master table(i.e LoanDetails dimension table)
+
+
+
